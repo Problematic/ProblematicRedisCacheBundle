@@ -1,0 +1,8 @@
+services:
+    problematic.redis_cache.orm:
+        class: Problematic\RedisCacheBundle\Entity\ORMRedisCache
+        arguments:
+            em: "@doctrine.orm.entity_manager"
+            redis: "@snc_redis.default_client"
+            serializer: "@serializer"
+            logger: "@logger"
